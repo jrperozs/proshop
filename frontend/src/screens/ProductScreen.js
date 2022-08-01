@@ -8,12 +8,12 @@ import Loader from '../components/Loader'
 import { listProductDetails } from '../actions/productActions'
 
 const ProductScreen = () => {
-  const [qty, setQty] = useState(0)
+  const [qty, setQty] = useState(1)
   const params = useParams()
   const dispatch = useDispatch()
   const history = useNavigate()
 
-  const productDetails = useSelector(state => state.productDetails)
+  const productDetails = useSelector((state) => state.productDetails)
   const { loading, error, product } = productDetails
 
   useEffect(() => {
@@ -21,6 +21,7 @@ const ProductScreen = () => {
   }, [dispatch])
 
   const addToCartHandler = () => {
+    //console.log(`${qty}`);
     history(`/cart/${params.id}?qty=${qty}`)
   }
 
