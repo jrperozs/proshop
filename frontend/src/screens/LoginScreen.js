@@ -18,7 +18,7 @@ const LoginScreen = ({ location }) => {
     const { loading, error, userInfo } = userLogin
     const [searchParams] = useSearchParams();
     const paramArray = [...searchParams];
-    const redirect = paramArray && paramArray.length>0 ? paramArray[0][1] : '/'
+    const redirect = paramArray && paramArray.length>0 ? '/' + paramArray[0][1] : '/'
     //const redirect = location.search ? location.search.split('=')[1] : '/'
     
 
