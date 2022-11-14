@@ -26,7 +26,7 @@ const LoginScreen = ({ location }) => {
         if (userInfo) {
             //history('/login?redirect=shipping')
             history(redirect)
-            console.log(redirect)
+            //console.log(redirect)
         }
       }, [history, userInfo, redirect])
 
